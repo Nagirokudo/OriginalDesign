@@ -8,6 +8,7 @@ void draw()
 	circle();
 	head ();
 	face();
+	star();
 } 
 
 void mousePressed()
@@ -17,8 +18,8 @@ void mousePressed()
 
 void circle()
 {
-	strokewidth(3);
-	fill(255,255,0);
+	strokeWeight(3);
+	fill(0,255,128);
 	ellipse(200,100,150,150);
 }
 
@@ -32,6 +33,7 @@ void head()
 
 void face()
 {	
+	strokeWeight(1);
 	//mouth
 	fill(255);
 	ellipse(200, 100, 80, 80);
@@ -66,4 +68,24 @@ void face()
 
 }
 
+void star()
+{
+	beginShape();
+		vertex(196,203);
+		vertex(196,203);
+		vertex(181,236);
+		vertex(146,240);
+		vertex(175,262);
+		vertex(157,313);
+		vertex(212,279);
+		vertex(257,312);
+		vertex(250,263);
+		vertex(300,242);
+		vertex(232,226);
+		vertex(209,182);
+		vertex(196,203);
+		vertex(196,203);
+	endShape();
+
+}
 
