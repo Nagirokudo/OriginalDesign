@@ -1,3 +1,5 @@
+int x = -205;
+
 void setup()
 {
   size(400,400);
@@ -5,10 +7,14 @@ void setup()
 
 void draw()
 {
+	background(51,255,255);
 	circle();
 	head ();
 	face();
 	star();
+	x++;
+	if (x == 300)
+		{x = 0;}
 } 
 
 void mousePressed()
@@ -70,22 +76,27 @@ void face()
 
 void star()
 {
+	fill(255,255,0);
 	beginShape();
-		vertex(196,203);
-		vertex(196,203);
-		vertex(181,236);
-		vertex(146,240);
-		vertex(175,262);
-		vertex(157,313);
-		vertex(212,279);
-		vertex(257,312);
-		vertex(250,263);
-		vertex(300,242);
-		vertex(232,226);
-		vertex(209,182);
-		vertex(196,203);
-		vertex(196,203);
+		vertex(x+205,179);
+		vertex(x+205,179);
+		vertex(x+184,225);
+		vertex(x+127,237);
+		vertex(x+175,262);
+		vertex(x+157,313);
+		vertex(x+212,279);
+		vertex(x+257,312);
+		vertex(x+250,263);
+		vertex(x+300,237);
+		vertex(x+232,226);
+		vertex(x+205,179);
+		vertex(x+205,179);
 	endShape();
+
+	strokeWeight(4);
+	line(191,231,191,244);
+	line(226,231,226,244);
+	arc(209,260,40,25,0,PI);
 
 }
 
