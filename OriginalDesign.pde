@@ -1,4 +1,5 @@
 int x = -205;
+boolean right = true;
 
 void setup()
 {
@@ -12,9 +13,17 @@ void draw()
 	head ();
 	face();
 	star();
-	x++;
-	if (x == 300)
-		{x = 0;}
+	if (right == true)
+		{x++;}
+	
+	if (x == 200)
+		{right = false;}
+
+	if (right == false)
+		{x--;}
+
+	if (x == -205)
+		{right = true;}
 } 
 
 void mousePressed()
@@ -94,9 +103,9 @@ void star()
 	endShape();
 
 	strokeWeight(4);
-	line(191,231,191,244);
-	line(226,231,226,244);
-	arc(209,260,40,25,0,PI);
+	line(x+191,231,x+191,244);
+	line(x+226,231,x+226,244);
+	arc(x+209,260,40,25,0,PI);
 
 }
 
